@@ -28,3 +28,14 @@ jobs:
             - name: execute the scripts in the DotnetTemplate.Web directory
               run: npm run build
               working-directory: DotnetTemplate.Web
+
+            - name: create the dotnet test script
+              run: dotnet test
+
+            - name: run npm t in the DotnetTemplate.Web directory
+              run: npm t
+              working-directory: DotnetTemplate.Web
+
+            - name: run npm lint in the DotnetTemplate.Web directory
+              run: npm run lint
+              working-directory: DotnetTemplate.Web
